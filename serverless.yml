@@ -60,3 +60,12 @@ functions:
           method: get
           cors: true
           authorizer: aws_iam
+
+  list:
+    handler: list.main
+    events:
+      - http:
+          path: auctions
+          method: get
+          cors: true
+          authorizer: aws_iam
