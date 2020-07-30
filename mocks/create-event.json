@@ -1,0 +1,8 @@
+{
+  "body": "{\"title\":\"jacket\",\"description\":\"leather jacket, 3 years old, fine condition\",\"startPrice\":\"500\"}",
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}
