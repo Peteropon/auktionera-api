@@ -21,8 +21,8 @@ provider:
   # commit your .env.
   #
   environment:
-    SAMPLE_ENV_VAR: ${env:SAMPLE_ENV_VAR}
     tableName: auctions
+    stripeSecretKey: ${env:STRIPE_SECRET_KEY}
     iamRoleStatements:
       - Effect: Allow
         Action:
@@ -85,6 +85,15 @@ functions:
       - http:
           path: auctions/{id}
           method: delete
+          cors: true
+          authorizer: aws_iam
+
+  billing:
+    handler: billing.main
+    events:
+      - http:
+          path: billing
+          method: post
           cors: true
           authorizer: aws_iam
 
