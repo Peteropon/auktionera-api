@@ -47,7 +47,16 @@ functions:
     handler: create.main
     events:
       - http:
-          path: notes
+          path: auctions
           method: post
+          cors: true
+          authorizer: aws_iam
+
+  get:
+    handler: get.main
+    events:
+      - http:
+          path: auctions/{id}
+          method: get
           cors: true
           authorizer: aws_iam
