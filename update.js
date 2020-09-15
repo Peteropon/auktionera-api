@@ -11,11 +11,12 @@ export const main = handler(async (event, context) => {
       auctionId: event.pathParameters.id,
     },
     UpdateExpression:
-      "SET title = :title, description = :description, startPrice = :startPrice",
+      "SET title = :title, description = :description, startPrice = :startPrice, attachment = :attachment",
     ExpressionAttributeValues: {
       ":title": data.title || null,
       ":description": data.description || null,
       ":startPrice": data.startPrice || null,
+      ":attachment": data.attachment || null,
     },
     ReturnValues: "ALL_NEW",
   };

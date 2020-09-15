@@ -13,6 +13,7 @@ export const main = handler(async (event, context) => {
       title: data.title,
       description: data.description,
       startPrice: data.startPrice,
+      attachment: data.attachment,
       createdAt: Date.now(),
     },
   };
