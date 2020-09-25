@@ -71,6 +71,15 @@ functions:
           cors: true
           authorizer: aws_iam
 
+  listAll:
+    handler: listAll.main
+    events:
+      - http:
+          path: list
+          method: get
+          cors: true
+          authorizer: aws_iam
+
   update:
     handler: update.main
     events:
