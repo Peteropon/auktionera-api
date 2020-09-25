@@ -76,7 +76,7 @@ functions:
     events:
       - http:
           path: list
-          method: get
+          method: scan
           cors: true
           authorizer: aws_iam
 
