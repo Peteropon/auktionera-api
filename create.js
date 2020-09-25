@@ -15,6 +15,7 @@ export const main = handler(async (event, context) => {
       startPrice: data.startPrice,
       attachment: data.attachment,
       createdAt: Date.now(),
+      isActive: true,
     },
   };
 
